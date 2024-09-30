@@ -1,0 +1,47 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    /* Pushes name to left, nav to right */
+    align-items: center;
+    /* Vertically centers the name and nav links */
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.site-title h1 {
+    font-size: 24px;
+    margin: 0;
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 20px;
+    /* Add space between the links */
+}
+
+nav a:hover {
+    color: #aaa;
+}
+
+/* Active page link */
+nav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Ensure the main content doesn't get hidden under the navbar */
+main {
+    margin-top: 70px;
+    /* Adjust based on the height of the navbar */
+    padding: 20px;
+    text-align: center;
+}
