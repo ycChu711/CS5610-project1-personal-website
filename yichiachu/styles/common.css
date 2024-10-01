@@ -1,15 +1,22 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar Styling */
 .navbar-container {
     display: flex;
     justify-content: space-between;
-    /* Pushes name to left, nav to right */
     align-items: center;
-    /* Vertically centers the name and nav links */
-    padding: 10px 20px;
     background-color: #333;
     color: white;
+    padding: 20px;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     box-sizing: border-box;
 }
@@ -25,23 +32,121 @@ nav a {
     text-decoration: none;
     font-size: 18px;
     margin-left: 20px;
-    /* Add space between the links */
 }
 
 nav a:hover {
-    color: #aaa;
+    color: #ddd;
 }
 
-/* Active page link */
-nav a.active {
-    font-weight: bold;
+nav a.active-page {
     text-decoration: underline;
 }
 
-/* Ensure the main content doesn't get hidden under the navbar */
-main {
-    margin-top: 70px;
-    /* Adjust based on the height of the navbar */
+/* Container for left and right sections */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
     padding: 20px;
+}
+
+/* Home Intro Section (Left, Fixed) */
+.home-intro {
+    position: fixed;
+    left: 20px;
+    top: 120px;
+    /* Positioned below the navbar */
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: left;
+}
+
+.home-intro h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.home-intro p {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Main content (Right, Scrolling) */
+.home-main-content {
+    margin-left: 340px;
+    width: calc(100% - 360px);
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.job,
+.education-item {
+    margin-bottom: 20px;
+}
+
+.job-title,
+.education-school {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.job-company,
+.education-date {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
     text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Mobile-Friendly Design */
+@media (max-width: 900px) {
+    .home-intro {
+        position: relative;
+        width: auto;
+        left: 0;
+        top: 0;
+        margin-bottom: 20px;
+    }
+
+    .content-container {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .home-main-content {
+        margin-left: 0;
+        width: 100%;
+    }
 }
