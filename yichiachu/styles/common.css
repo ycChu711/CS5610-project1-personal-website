@@ -98,6 +98,13 @@ h2 {
     margin-top: 10px;
 }
 
+.education-title-date,
+.job-title-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .job,
 .education-item {
     margin-bottom: 20px;
@@ -107,13 +114,22 @@ h2 {
 .education-school {
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 0;
 }
 
 .job-company,
-.education-date {
+.education-major {
+    font-size: 16px;
+    color: black;
+    margin-top: 5px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.job-date {
     font-size: 16px;
     color: #666;
-    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 ul {
