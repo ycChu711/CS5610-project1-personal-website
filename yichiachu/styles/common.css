@@ -1,4 +1,3 @@
-/* General body styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,7 +6,6 @@ body {
     color: #333;
 }
 
-/* Navbar Styling */
 .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -43,7 +41,7 @@ nav a.active-page {
     text-decoration: underline;
 }
 
-/* Container for left and right sections */
+
 .content-container {
     display: flex;
     justify-content: space-between;
@@ -53,12 +51,11 @@ nav a.active-page {
 
 }
 
-/* Home Intro Section (Left, Fixed) */
+
 .home-intro {
     position: fixed;
     left: 20px;
     top: 90px;
-    /* This should align with the padding-top of the content */
     width: 300px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -78,7 +75,7 @@ nav a.active-page {
     line-height: 1.5;
 }
 
-/* Main content (Right, Scrolling) */
+
 .home-main-content {
     margin-left: 360px;
     width: calc(100% - 380px);
@@ -149,7 +146,6 @@ footer {
     width: 100%;
 }
 
-/* Mobile-Friendly Design */
 @media (max-width: 900px) {
     .home-intro {
         position: relative;
