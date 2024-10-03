@@ -15,7 +15,7 @@
             </div>
             <div>
                 <nav class="site-nav-bar">
-                    <a href="../home/">Home</a>
+                    <a href="../home/" class="active-page">Home</a>
                     <a href="../about/">About</a>
                     <a href="../projects/">Projects</a>
                     <a href="../contact/">Contact</a>
@@ -23,13 +23,118 @@
             </div>
         </div>
     </header>
-    <main>
+
+    <div class="content-container">
         <section class="home-intro">
-            <h1>Welcome to my personal website!</h1>
-            <p>My name is Yi-Chia Chu, also know as Erica. I am a Computer Science Master student at Northeastern
-                University.</p>
+            <h2>Hi there !</h2>
+            <p>I'm Yi-Chia Chu, also known as Erica, a passionate software developer with a background in
+                bioengineering and computer science. </p>
+            <p>Here you'll find details about my education, professional experiences, and projects. Feel free
+                to explore!</p>
         </section>
-    </main>
+
+        <div class="home-main-content">
+            <section class="education">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="education-title-date">
+                        <p class="education-school">Northeastern University</p>
+                        <p class="education-date">01/2023 - Present</p>
+                    </div>
+                    <p class="education-major">Master of Science in Computer Science</p>
+                </div>
+                <div class="education-item">
+                    <div class="education-title-date">
+                        <p class="education-school">University of Washington</p>
+                        <p class="education-date">09/2017 - 06/2021</p>
+                    </div>
+                    <p class="education-major">Bachelor of Science in Bioengineering</p>
+                </div>
+            </section>
+            <section class="experience">
+                <h2>Experience</h2>
+
+                <div class="job" id="job1">
+                    <div class="job-title-date">
+                        <h3 class="job-title">Software Development Engineer Intern</h3>
+                        <p class="job-date">06/2024 - 08/2024</p>
+                    </div>
+                    <p class="job-company">PanVision Technology Corp.</p>
+                    <ul class="job-description">
+                        <li>Developed and trained a YOLOv5 model for object behavior detection using an AI-embedded
+                            camera.
+                        </li>
+                        <li>Integrated the YOLOv5 model with DeepSort to improve object tracking accuracy by 30%.</li>
+                        <li>Developed an iOS app using Flutter to receive warnings from an MQTT server, providing push
+                            notifications for detected behaviors.</li>
+                    </ul>
+                </div>
+
+                <div class="job" id="job2">
+                    <div class="job-title-date">
+                        <h3 class="job-title">Research Assistant</h3>
+                        <p class="job-date">11/2021 - 06/2022</p>
+                    </div>
+                    <p class="job-company">Biophotonics and Imaging Lab, University of Washington</p>
+                    <ul class="job-description">
+                        <li>Developed a deep learning algorithm in MATLAB to identify and quantify geographic atrophy
+                            (GA)
+                            area.</li>
+                        <li>Improved the algorithm accuracy by 25% for varying image contrast conditions.</li>
+                        <li>Automated identification and segmentation processes using a CNN model on OCT datasets.</li>
+                    </ul>
+                </div>
+
+                <div class="job" id="job3">
+                    <div class="job-title-date">
+                        <h3 class="job-title">Software Quality Assurance</h3>
+                        <p class="job-date">08/2021 - 11/2021</p>
+                    </div>
+                    <p class="job-company">Genemod</p>
+                    <ul class="job-description">
+                        <li>Saved testing time by 90% by implementing automated unit tests in Python for a cloud-based
+                            lab
+                            work platform.</li>
+                        <li>Reduced data migration time by 50% using Excel VBA functions to sanitize data.</li>
+                    </ul>
+                </div>
+
+                <div class="job" id="job4">
+                    <div class="job-title-date">
+                        <h3 class="job-title">Software Support Engineer</h3>
+                        <p class="job-date">01/2021 - 06/2021</p>
+                    </div>
+                    <ul class="job-description">
+                        <li>Troubleshooted up to 30 hardware/software issues weekly with Android device logs for the
+                            T-Mobile SyncUP KIDS Watch.</li>
+                        <li>Worked with customers and development teams to support the deployment of connectivity
+                            services
+                            to customer sites.</li>
+                    </ul>
+                </div>
+
+                <div class="job" id="job5"></div>
+                <div class="job-title-date">
+                    <h3 class="job-title">R&D Engineer</h3>
+                    <p class="job-date">06/2020 - 09/2020</p>
+                </div>
+                <p class="job-company">
+                    <a href="https://www.cytena-bps.com/" target="_blank">Cytena Bioprocess Solutions</a>
+                </p>
+                <ul class="job-description">
+                    <li>Applied Arduino microcontroller to control polyimide Heater for monitoring evaporation rate
+                        experiments of functional lids for a microbioreactor and to monitor air pressure in the system.
+                    </li>
+                    <li>Utilized CAD and COMSOL to simulate the design and helped save $ 500 for prototyping.</li>
+                    <li>Participated in the manufacture of the microbioreactor, including soldering, assembly, QA, and
+                        QC,
+                        producing products with revenue contributions of over $150,000.</li>
+                </ul>
+        </div>
+        </section>
+
+    </div>
+    </div>
     <footer>
         <p>&copy; Yi-Chia Erica Chu</p>
     </footer>
