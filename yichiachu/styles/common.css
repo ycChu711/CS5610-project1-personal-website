@@ -41,30 +41,25 @@ nav a.active-page {
     text-decoration: underline;
 }
 
-/*Hoe Page */
 .content-container {
     display: flex;
     justify-content: space-between;
     padding: 20px;
     padding-top: 90px;
     padding-right: 0;
-
 }
 
 .profile-img {
     width: 150px;
-    /* Adjust the size as needed */
     height: 150px;
     border-radius: 50%;
-    /* Makes the image circular */
     display: block;
     margin: 0 auto 20px auto;
-    /* Centers the image and adds bottom margin */
     object-fit: cover;
-    /* Ensures the image fits inside the circle without distortion */
 }
 
-.home-intro {
+.home-intro,
+.contact-content {
     position: fixed;
     left: 20px;
     top: 90px;
@@ -87,8 +82,8 @@ nav a.active-page {
     line-height: 1.5;
 }
 
-
-.home-main-content {
+.home-main-content,
+.contact-form-container {
     margin-left: 360px;
     width: calc(100% - 380px);
 }
@@ -200,7 +195,6 @@ footer {
     opacity: 1;
 }
 
-
 .project-link {
     display: block;
     height: 100%;
@@ -217,35 +211,27 @@ footer {
     font-size: 20px;
     font-weight: bold;
     text-shadow: 1px 1px 5px rgba(0, 0, 0);
-
 }
-
-
 
 /* Background images for each project */
 #project1 {
     background-image: url('../images/PokemonDiscordChatbot.png');
-
 }
 
 #project2 {
     background-image: url('../images/EyeDiseaseScreeningApp.png');
-
 }
 
 #project3 {
     background-image: url('../images/EmgInducedClaw.png');
-
 }
 
 #project4 {
     background-image: url('../images/2016iGEM.png');
-
 }
 
 #project5 {
     background-image: url('../images/2015iGEM.png');
-
 }
 
 .project-item:hover {
@@ -275,4 +261,96 @@ footer {
     .project-item {
         width: calc(100% - 20px);
     }
+
+    .contact-content {
+        position: relative;
+        width: auto;
+        left: 0;
+        top: 0;
+        margin-bottom: 20px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        margin-top: 0;
+        padding-right: 20px;
+    }
+
+    .contact-form-container {
+        margin-left: 0;
+        width: 100%;
+    }
+
+}
+
+/* Contact Form Adjustments */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 90px;
+    gap: 20px;
+    /* Adds space between elements */
+}
+
+.contact-intro {
+    flex: 1 1 45%;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.contact-form {
+    flex: 1 1 45%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: auto;
+    /* Let the height adjust based on content, no fixed height */
+    min-height: 120px;
+    /* Set a minimum height for the textarea */
+    resize: vertical;
+    /* Allow vertical resize */
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
 }
