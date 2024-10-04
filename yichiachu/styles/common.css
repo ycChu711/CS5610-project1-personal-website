@@ -51,6 +51,18 @@ nav a.active-page {
 
 }
 
+.profile-img {
+    width: 150px;
+    /* Adjust the size as needed */
+    height: 150px;
+    border-radius: 50%;
+    /* Makes the image circular */
+    display: block;
+    margin: 0 auto 20px auto;
+    /* Centers the image and adds bottom margin */
+    object-fit: cover;
+    /* Ensures the image fits inside the circle without distortion */
+}
 
 .home-intro {
     position: fixed;
