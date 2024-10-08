@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Yi-Chia Chu Personal Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
     <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 
 <body>
@@ -13,19 +15,24 @@
             <div class="site-title">
                 <h1>Yi-Chia Chu</h1>
             </div>
-            <div>
-                <nav class="site-nav-bar">
-                    <a href="../home/" class="active-page">Home</a>
-                    <a href="../about/">About</a>
-                    <a href="../projects/">Projects</a>
-                    <a href="../contact/">Contact</a>
-                </nav>
-            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="site-nav-bar">
+                <a href="../home/" class="active-page">Home</a>
+                <a href="../about/">About</a>
+                <a href="../projects/">Projects</a>
+                <a href="../contact/">Contact</a>
+            </nav>
         </div>
     </header>
 
     <div class="content-container">
         <section class="home-intro">
+            <img src="../images/HomeProfile.png" alt="Profile" class="profile-img">
             <h2>Hi there !</h2>
             <p>I'm Yi-Chia Chu, also known as Erica, a passionate software developer with a background in
                 bioengineering and computer science. </p>
@@ -104,6 +111,7 @@
                         <h3 class="job-title">Software Support Engineer</h3>
                         <p class="job-date">01/2021 - 06/2021</p>
                     </div>
+                    <p class="job-company">Quanta Computer</p>
                     <ul class="job-description">
                         <li>Troubleshooted up to 30 hardware/software issues weekly with Android device logs for the
                             T-Mobile SyncUP KIDS Watch.</li>
@@ -119,7 +127,7 @@
                     <p class="job-date">06/2020 - 09/2020</p>
                 </div>
                 <p class="job-company">
-                    <a href="https://www.cytena-bps.com/" target="_blank">Cytena Bioprocess Solutions</a>
+                    Cytena Bioprocess Solutions
                 </p>
                 <ul class="job-description">
                     <li>Applied Arduino microcontroller to control polyimide Heater for monitoring evaporation rate

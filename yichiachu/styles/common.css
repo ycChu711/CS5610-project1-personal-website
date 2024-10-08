@@ -38,47 +38,28 @@ nav a:hover {
 }
 
 nav a.active-page {
-    text-decoration: underline;
+    font-size: 25px;
+    font-weight: bolder;
 }
 
-/*Hoe Page */
-.content-container {
-    display: flex;
+.nav-toggle {
+    display: none;
+}
+
+.hamburger-icon {
+    display: none;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
-    padding-top: 90px;
-    padding-right: 0;
-
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
 }
 
-
-.home-intro {
-    position: fixed;
-    left: 20px;
-    top: 90px;
-    width: 300px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    text-align: left;
-}
-
-.home-intro h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.home-intro p {
-    font-size: 16px;
-    margin: 0;
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-
-.home-main-content {
-    margin-left: 360px;
-    width: calc(100% - 380px);
+.hamburger-icon span {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
 }
 
 section {
@@ -95,41 +76,6 @@ h2 {
     margin-top: 10px;
 }
 
-.education-title-date,
-.job-title-date {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.job,
-.education-item {
-    margin-bottom: 20px;
-}
-
-.job-title,
-.education-school,
-.project-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 0;
-}
-
-.job-company,
-.education-major {
-    font-size: 16px;
-    color: black;
-    margin-top: 5px;
-    font-style: italic;
-    margin-bottom: 5px;
-}
-
-.job-date {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 0;
-}
-
 ul {
     margin-left: 20px;
 }
@@ -142,125 +88,54 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
+    bottom: 0;
+    width: 100%;
     position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
-/* Projects */
-.projects-container {
-    padding: 20px;
-    padding-top: 90px;
+footer p {
+    margin: 0;
+    padding: 10px;
 }
 
-.projects-flex-column {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.project-item {
-    position: relative;
-    width: calc(50% - 20px);
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 20px;
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.project-item::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.project-item:hover::before {
-    opacity: 1;
-}
-
-
-.project-link {
-    display: block;
-    height: 100%;
-    width: 100%;
-    text-decoration: none;
-    position: relative;
-    color: rgb(255, 255, 255);
-}
-
-.project-title {
-    position: absolute;
-    bottom: 10px;
-    left: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0);
-
-}
-
-
-
-/* Background images for each project */
-#project1 {
-    background-image: url('../images/PokemonDiscordChatbot.png');
-
-}
-
-#project2 {
-    background-image: url('../images/EyeDiseaseScreeningApp.png');
-
-}
-
-#project3 {
-    background-image: url('../images/EmgInducedClaw.png');
-
-}
-
-#project4 {
-    background-image: url('../images/2016iGEM.png');
-
-}
-
-#project5 {
-    background-image: url('../images/2015iGEM.png');
-
-}
-
-.project-item:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-@media (max-width: 900px) {
-    .home-intro {
-        position: relative;
-        width: auto;
-        left: 0;
-        top: 0;
-        margin-bottom: 20px;
+@media (max-width: 600px) {
+    nav a {
+        font-size: 100%;
+        margin-left: 10px;
     }
 
-    .content-container {
+    nav a.active-page {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .site-nav-bar {
+        display: none;
         flex-direction: column;
-        margin-top: 0;
-        padding-right: 20px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000;
     }
 
-    .home-main-content {
-        margin-left: 0;
-        width: 100%;
+    .nav-toggle:checked~.site-nav-bar {
+        display: flex;
     }
 
-    .project-item {
-        width: calc(100% - 20px);
+    .hamburger-icon {
+        display: flex;
     }
+
+    nav a {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+}
+
+::selection {
+    background-color: orange;
 }
