@@ -281,6 +281,26 @@ footer {
         width: 100%;
     }
 
+    .about-container {
+        grid-template-columns: 1fr;
+        /* Single column */
+        grid-template-areas:
+            "about-intro"
+            "about-hobbies"
+            "about-photos";
+    }
+
+    .about-photos {
+        grid-template-columns: 1fr;
+        /* Stack photos in a single column */
+        grid-template-rows: auto;
+    }
+
+    .about-photos img {
+        width: 100%;
+        /* Ensure the photos resize correctly */
+    }
+
 }
 
 /* Contact Form Adjustments */
@@ -353,4 +373,117 @@ footer {
 
 .contact-form button:hover {
     background-color: #555;
+}
+
+/* General About Page Grid Layout */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two columns layout */
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "about-fun-facts about-hobbies"
+        "about-photos about-photos";
+    /* Photos section spans two columns */
+    gap: 20px;
+    padding: 20px;
+    padding-top: 90px;
+}
+
+/* Fun Facts Section */
+.about-fun-facts {
+    grid-area: about-fun-facts;
+}
+
+/* Hobbies Section */
+.about-hobbies {
+    grid-area: about-hobbies;
+}
+
+/* Photos Section */
+.about-photos {
+    grid-area: about-photos;
+}
+
+.about-photos-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two columns for photos */
+    grid-template-rows: repeat(3, auto);
+    /* Three rows */
+    gap: 10px;
+    align-items: start;
+}
+
+/* Styling for each section */
+.about-fun-facts,
+.about-hobbies,
+.about-photos {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for each hobby item */
+.about-hobbies ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.about-hobbies li {
+    margin-bottom: 10px;
+}
+
+/* Styling for photos */
+.about-photos img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Left column: two straight vertical photos */
+.about-photos .vertical {
+    grid-column: 1;
+    height: 100%;
+}
+
+/* Right column: horizontal and vertical photos */
+.about-photos .horizontal {
+    grid-column: 2;
+    grid-row: span 1;
+    height: auto;
+}
+
+.about-photos-display img {
+    align-self: end;
+    /* Align each image to the bottom */
+}
+
+.about-photos .horizontal-large {
+    grid-column: 2;
+    grid-row: span 2;
+    height: 100%;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 900px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "about-fun-facts"
+            "about-hobbies"
+            "about-photos";
+        /* Stack sections vertically */
+    }
+
+    .about-photos-display {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .about-photos img {
+        width: 100%;
+    }
 }
