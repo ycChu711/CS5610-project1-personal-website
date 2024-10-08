@@ -78,7 +78,7 @@
     margin-bottom: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
     .home-intro {
         position: relative;
         width: auto;
